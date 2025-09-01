@@ -19,12 +19,23 @@
                 <div class="header__logo">
                     <a href="#">Hepta</a>
                 </div>
-                <div class="header__menu d-flex direction-col space-between ">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div onclick="togglemenu() ; liam()" Id="spans"
+                    class="header__menu d-flex direction-col space-between ">
+                    <span class="aval"></span>
+                    <span class="dovom"></span>
+                    <span class="sevom"></span>
                 </div>
             </div>
+        </div>
+        <div id="hidden-menu">
+            <ul class="list-menu  ">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Hotels</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
     </div>
     <div class="hero">
@@ -44,7 +55,7 @@
                     <path
                         d="M187.2 100.9C174.8 94.1 159.8 94.4 147.6 101.6C135.4 108.8 128 121.9 128 136L128 504C128 518.1 135.5 531.2 147.6 538.4C159.7 545.6 174.8 545.9 187.2 539.1L523.2 355.1C536 348.1 544 334.6 544 320C544 305.4 536 291.9 523.2 284.9L187.2 100.9z" />
                 </svg></a>
-            <a href="#"></a><span>scroll down</span></a>
+            <a href="#"><span>scroll down</span></a>
         </div>
     </div>
     <div class="padding-section">
@@ -243,8 +254,8 @@
                 <div class="row">
                     <div class="col-3 Destination__item">
                         <div class="top">
-                            <a href="#"></a><img class="full-img"
-                                src="https://preview.colorlib.com/theme/hepta/images/img_1.jpg" /></a>
+                            <a href="#"><img class="full-img"
+                                    src="https://preview.colorlib.com/theme/hepta/images/img_1.jpg" /></a>
                         </div>
                         <div class="bottom">
                             <h3 class="mb0 font-weight-200"><a href="#">Food & Wines</a></h3>
@@ -262,8 +273,8 @@
                     </div>
                     <div class="col-3 Destination__item">
                         <div class="top">
-                            <a href="#"></a><img class="full-img"
-                                src="https://preview.colorlib.com/theme/hepta/images/img_2.jpg" /></a>
+                            <a href="#"><img class="full-img"
+                                    src="https://preview.colorlib.com/theme/hepta/images/img_2.jpg" /></a>
                         </div>
                         <div class="bottom">
                             <h3 class="mb0 font-weight-200"><a href="#">Resort & Spa</a></h3>
@@ -281,8 +292,8 @@
                     </div>
                     <div class="col-3 Destination__item">
                         <div class="top">
-                            <a href="#"></a><img class="full-img"
-                                src="https://preview.colorlib.com/theme/hepta/images/img_4.jpg" /></a>
+                            <a href="#"><img class="full-img"
+                                    src="https://preview.colorlib.com/theme/hepta/images/img_4.jpg" /></a>
                         </div>
                         <div class="bottom">
                             <h3 class="mb0 font-weight-200"><a href="#">Hotel Rooms</a></h3>
@@ -300,8 +311,8 @@
                     </div>
                     <div class="col-3 Destination__item">
                         <div class="top">
-                            <a href="#"></a><img class="full-img"
-                                src="https://preview.colorlib.com/theme/hepta/images/img_5.jpg" /></a>
+                            <a href="#"><img class="full-img"
+                                    src="https://preview.colorlib.com/theme/hepta/images/img_5.jpg" /></a>
                         </div>
                         <div class="bottom">
                             <h3 class="mb0 font-weight-200"><a href="#">Mountain Climbing</a></h3>
@@ -366,15 +377,16 @@
                                 <div class="input relative">
                                     <input placeholder="Your email ..." />
                                     <button><i class="fa fa-paper-plane"></i></button>
+                                </div>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class=" footer-bottom d-flex direction-col text-center">
                     <p>Copyright © 2025 All rights reserved | This template is made with
-                    <i class="fa-solid fa-heart"></i>
-                    by 
-                    <a href="#">Colorlib</a>
+                        <i class="fa-solid fa-heart"></i>
+                        by
+                        <a href="#">Colorlib</a>
                     </p>
                     <p class="social">
                         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
@@ -382,11 +394,24 @@
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                         <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                      </p>
-                </di>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-    </div>
+    <script>
+        function togglemenu() {
+            if (document.getElementById("hidden-menu").classList.contains("show")) {
+                document.getElementById("hidden-menu").classList.remove("show");
+            } else {
+                document.getElementById("hidden-menu").classList.add("show");
+            }
+        }
+        function liam() {
+            document.getElementById("spans").classList.toggle("show");
+        }
+
+    </script>
 </body>
+
 </html>
